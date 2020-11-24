@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Audio Slider | miastudios </title>
+    <meta name="author" content="Musah Ibrahim Ali">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="This is an auto play video, images, and audio carousel">
+    <meta name="keywords" content="video audio image carousel">
+    <link href="./css/video-audio-slider.css" rel="stylesheet" type="text/css" />
+    
+    <!--videoVideoPlugin.js is required only when the slider contains video or audio.-->
+    <script src="./js/VideoPlugin.js" async type="text/javascript"></script>
+    <script src="./js/video-audio-slider.js" async type="text/javascript"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- This might have some glitches when opened locally, i suggest using a live server -->
+    <!-- if you are using vs code install live server plugin and open it with it -->
+    
+    <script type="text/javascript">
+        //don't copy the script below into your page.
+        if (!document.domain) alert("The video will not work properly if opening the page by local path. Please test this page through HTTP on a web or localhost server");    
+    </script>
+    
+    <style>
+        body {font: normal 0.9em Arial;margin:0; background-color: black;}
+        text {display: none;}
+        a {color:#1155CC;}
+        ul li {padding: 10px 0;}
+        header {display:block;padding:60px 0 10px;background-color:#333; text-align:center;}
+        header a {
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            padding: 8px 13px 7px;
+            color: #555;
+            text-decoration:none;
+            transition: color 0.7s;
+        }
+        header a.active {
+            font-weight:bold;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            background: #4d5256;
+            color: #191919;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id='video-slider'>
+        <div class="slider-inner">
+            <ul>
+
+                <li>
+                    <div class="video">
+                        <video controls autoplay width="100%">
+                            <source src="./video/Bridge.mp4" type="video/mp4" data-autoplay="true" />
+                        </video>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="video">
+                        <video controls autoplay width="100%">
+                            <source src="./video/video1.mp4" type="video/mp4" data-autoplay="true" />
+                        </video>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="video">
+                        <video controls autoplay width="100%">
+                            <source src="./video/video_3.mp4" type="video/mp4" data-autoplay="true" />
+                        </video>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px;">
+                        <video controls autoplay width="100%">
+                            <source src="./video/Fireworks.mp4" type="video/mp4" data-autoplay="true" />
+                        </video>
+                    </div>
+                </li>
+
+                <!-- Add Audios using audio tags -->
+                <!-- Add autoplay to the audio if u want it to play automatically -->
+                <!-- <li>
+                    <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px;">
+                        <audio controls data-autoplay="1">
+                            <source src="./audio/audio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </li> -->
+
+                <!-- Add Youtube videos using iframes -->
+                <!-- <li>
+                    <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px;">
+                        <div class="video">
+                            <iframe src="https://www.youtube.com/embed/bUdbZk14G_w?enablejsapi=1&start=216&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1" frameborder="0" allowfullscreen data-autoplay="false"></iframe>
+                        </div>
+                    </div>
+                </li> -->
+
+                <!-- Add vimeo videos using iframes -->
+                <!-- <li>
+                    <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px;">
+                        <div class="video">
+                            <iframe src="https://player.vimeo.com/video/93292237" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </li> -->
+
+            </ul>
+
+            <div class="fs-icon"></div>
+
+        </div>
+    </div>
+   
+</body>
+</html>
